@@ -827,22 +827,7 @@ vendor/lib64/vendor.mediatek.hardware.power@2.1.so
 
 # Radio
 bin/modemdbfilter_client
-bin/vtservice
 etc/init/modemdbfilter_client.rc
-etc/init/init.vtservice.rc
-lib/libcomutils.so
-lib/libimsma.so
-lib/libimsma_adapt.so
-lib/libimsma_rtp.so
-lib/libimsma_socketwrapper.so
-lib/libmtk_vt_service.so
-lib/libsink.so
-lib/libsignal.so
-lib/libsource.so
-lib/libvcodec_cap.so
-lib/libvcodec_capenc.so
-lib/libvt_avsync.so
-lib/vendor.mediatek.hardware.videotelephony@1.0.so
 lib64/vendor.mediatek.hardware.modemdbfilter@1.0.so
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
