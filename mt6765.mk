@@ -225,13 +225,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
 
-# Rootdir
-PRODUCT_PACKAGES += \
-    fstab.mt6765 \
-    fstab.mt8768 \
-    fstab.mt6765.ramdisk \
-    fstab.mt8768.ramdisk
-
 PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.modem.rc \
