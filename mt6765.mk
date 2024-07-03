@@ -69,7 +69,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0.vendor \
     android.hardware.camera.device@3.5.vendor \
     android.hardware.camera.provider@2.4.vendor \
-    libstdc++.vendor
+    libstdc++.vendor \
+    Camera2
 
 # DRM
 PRODUCT_PACKAGES += \
