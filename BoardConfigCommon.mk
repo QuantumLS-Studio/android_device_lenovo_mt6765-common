@@ -83,5 +83,9 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 BOARD_VNDK_VERSION := current
 
+# SELinux
+# Inherit from the common SEPolicy for Lenovo devices
+include device/lenovo/sepolicy/sepolicy.mk
+
 # Inherit the proprietary files
 include vendor/lenovo/mt6765-common/BoardConfigVendor.mk
