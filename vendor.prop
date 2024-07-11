@@ -193,6 +193,7 @@ persist.log.tag.RfxDebugInfo=I
 persist.log.tag.RfxTimer=I
 persist.log.tag.RfxObject=I
 persist.log.tag.SlotQueueEntry=I
+persist.log.tag.SpeechMessengerNormal=S
 persist.log.tag.RfxAction=I
 persist.log.tag.RFX=I
 persist.log.tag.RpRadioMessage=I
