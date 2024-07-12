@@ -60,6 +60,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        lib/libsink.so)
+            "${PATCHELF}" --add-needed libshim_vtservice.so "${2}"
+            ;;
         vendor/lib*/libutinterface_custom_md.so)
             "${PATCHELF}" --add-needed libutinterface_md.so "${2}"
             ;;
