@@ -14,7 +14,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../.."
 
-HELPER="${ANDROID_ROOT}/vendor/lineage/build/tools/extract_utils.sh"
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -25,7 +25,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "achilles6_row_data"
+write_headers "amar_row_lte"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
