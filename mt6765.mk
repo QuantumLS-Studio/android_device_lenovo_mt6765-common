@@ -21,6 +21,8 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 PRODUCT_PACKAGES += \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio.service \
     android.hardware.audio@5.0.vendor \
     android.hardware.audio.effect@5.0-impl \
     android.hardware.bluetooth.audio@2.0-impl \
