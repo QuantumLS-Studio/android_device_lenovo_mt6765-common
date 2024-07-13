@@ -4,6 +4,25 @@ cc_library {
     vendor: true,
 }
 
+cc_library {
+    name: "libshim_memset",
+    vendor: true,
+    target: {
+        android_arm: {
+            srcs: ["libc/memset32.S"],
+            sanitize: {
+                misc_undefined: ["integer"],
+            },
+        },
+        android_arm64: {
+            srcs: ["libc/android_memset.S"],
+            sanitize: {
+                misc_undefined: ["integer"],
+            },
+        },
+    },
+}
+
 cc_library_shared {
     name: "libshim_showlogo",
     srcs: ["libshim_showlogo.cpp"],

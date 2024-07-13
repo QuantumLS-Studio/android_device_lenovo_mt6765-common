@@ -88,6 +88,9 @@ function blob_fixup() {
         vendor/lib/libmnl.so)
             "${PATCHELF}" --add-needed libshim_gps.so "${2}"
             ;;
+        vendor/lib*/libpixelflinger.so)
+            "${PATCHELF}" --add-needed libshim_memset.so "${2}"
+            ;;
         vendor/lib*/hw/audio.primary.mt6765.so)
             "${PATCHELF}" --replace-needed libmedia_helper.so libmedia_helper-v29.so ${2}
             ;;
