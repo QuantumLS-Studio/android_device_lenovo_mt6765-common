@@ -271,6 +271,8 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libshim_gps \
+    libshim_memset \
+    libshim_showlogo \
     libshim_vtservice
 
 # Text classifier
