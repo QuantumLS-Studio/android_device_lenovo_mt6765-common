@@ -22,11 +22,10 @@ extern "C" {
             bool doNotReconnect,
             float maxRequiredSpeed,
             audio_port_handle_t selectedDeviceId) {
-        const std::string& opPackageName = "com.mediatek.ims";
+        const AttributionSourceState& attributionSource = AttributionSourceState();
         new android::AudioTrack(streamType, sampleRate, format, channelMask, frameCount, flags, cbf,
-                                user, notificationFrames, sessionId, transferType, offloadInfo, uid,
-                                pid, pAttributes, doNotReconnect, maxRequiredSpeed, selectedDeviceId,
-                                opPackageName);
+                                user, notificationFrames, sessionId, transferType, offloadInfo, attributionSource,
+                                pAttributes, doNotReconnect, maxRequiredSpeed, selectedDeviceId);
             }
 
     void _ZN7android11AudioSourceC1EPK18audio_attributes_tRKNS_8String16Ejjjjii28audio_microphone_direction_tf(const audio_attributes_t *attr, const String16 &opPackageName, uint32_t sampleRate, uint32_t channelCount, uint32_t outSampleRate, uid_t uid, pid_t pid, audio_port_handle_t selectedDeviceId, audio_microphone_direction_t selectedMicDirection, float selectedMicFieldDimension);
