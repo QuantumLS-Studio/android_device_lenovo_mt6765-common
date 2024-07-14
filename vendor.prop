@@ -32,6 +32,10 @@ persist.vendor.camera3.pipeline.bufnum.min.high_ram.fdyuv=8
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.fdyuv=6
 ro.odm.tblenovo.camera.tuning.version=s5k4h7yxfront_ofilm_front_first:2020082801,s5k4h7yxlcetron_lce_front_second:2020082701,ov13b10_ofilm_back_first:2020082801,ov13b10qtech_qtech_back_second:2020082501,gc5035_ofilm_front_first:2020082701,gc5035kingcome_jinkang_front_second:2020081302,s5k4h7yx_ofilm_back_first:2020081801,s5k4h7yxqtech_qtech_back_second:2020082801,ov5675_ofilm_front_third:2020092902
 
+# Chipset
+ro.soc.manufacturer=MediaTek
+ro.soc.model=MT6765
+
 # Connectivity
 persist.vendor.connsys.chipid=-1
 persist.vendor.connsys.dynamic.dump=0
