@@ -140,6 +140,7 @@ ro.vendor.mtk_sec_video_path_support=1
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.running_without_sync_framework=true
+debug.renderengine.backend=threaded
 debug.sf.disable_backpressure=1
 ro.sf.hwrotation=0
 
