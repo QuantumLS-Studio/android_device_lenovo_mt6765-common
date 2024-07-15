@@ -1,3 +1,22 @@
+cc_library_shared {
+    name: "libshim_extractors",
+    srcs: ["libshim_extractors.cpp"],
+    shared_libs: [
+        "liblog",
+        "libmediandk",
+        "libutils",
+    ],
+    header_libs: [
+        "libbinder_headers",
+        "libstagefright_foundation_headers",
+        "media_ndk_headers",
+        "media_plugin_headers",
+    ],
+    include_dirs: [
+        "frameworks/av/media/libstagefright/foundation/include/media/stagefright/foundation",
+    ],
+}
+
 cc_library {
     name: "libshim_gps",
     srcs: ["libshim_gps.cpp"],
