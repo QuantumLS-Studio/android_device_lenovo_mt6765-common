@@ -288,6 +288,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_gps \
     libshim_memset \
+    libshim_mtkavenhancements \
     libshim_showlogo \
     libshim_vtservice
 
