@@ -88,6 +88,9 @@ function blob_fixup() {
         vendor/lib*/libutinterface_custom_md.so)
             "${PATCHELF}" --add-needed libutinterface_md.so "${2}"
             ;;
+        vendor/lib*/libudf.so)
+            "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
+            ;;
         vendor/lib/libgeofence.so)
             "${PATCHELF}" --add-needed libshim_gps.so "${2}"
             ;;
