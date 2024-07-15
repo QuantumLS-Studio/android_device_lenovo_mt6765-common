@@ -35,4 +35,6 @@ extern "C" {
         attr.source = AUDIO_SOURCE_DEFAULT;
         _ZN7android11AudioSourceC1EPK18audio_attributes_tRKNS_8String16Ejjjjii28audio_microphone_direction_tf(&attr, opPackageName, sampleRate, channelCount, outSampleRate, uid, pid, selectedDeviceId, selectedMicDirection, selectedMicFieldDimension);
     }
+
+    void _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEb() {}
 }
