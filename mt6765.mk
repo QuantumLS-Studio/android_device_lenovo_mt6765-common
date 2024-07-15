@@ -166,6 +166,7 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor \
     libclang_rt.ubsan_standalone-aarch64-android \
+    libclang_rt.ubsan_standalone-aarch64-android.vendor \
     libopus \
     libstagefright_softomx.vendor \
     libvorbisidec \
