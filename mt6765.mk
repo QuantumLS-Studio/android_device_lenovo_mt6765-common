@@ -156,6 +156,10 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libkeymaster_portable.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymaster_portable.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libpuresoftkeymasterdevice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpuresoftkeymasterdevice.so
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0.vendor
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
