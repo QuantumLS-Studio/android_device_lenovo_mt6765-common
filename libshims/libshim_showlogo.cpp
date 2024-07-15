@@ -1,4 +1,6 @@
 #include <gui/SurfaceComposerClient.h>
+#include <ui/StaticDisplayInfo.h>
+#include "include/ui/DisplayInfo.h"
 
 using namespace android;
 
@@ -21,4 +23,16 @@ extern "C" {
     _ZN7android14SurfaceControlD0Ev();
   }
 
+  status_t _ZN7android21SurfaceComposerClient20getStaticDisplayInfoERKNS_2spINS_7IBinderEEEPNS_2ui17StaticDisplayInfoE(const sp<IBinder>& display, ui::StaticDisplayInfo* info);
+
+  status_t _ZN7android21SurfaceComposerClient14getDisplayInfoERKNS_2spINS_7IBinderEEEPNS_11DisplayInfoE(const sp<IBinder>& display, DisplayInfo* info) {
+    ui::StaticDisplayInfo* staticInfo = reinterpret_cast<ui::StaticDisplayInfo*>(info);
+    return _ZN7android21SurfaceComposerClient20getStaticDisplayInfoERKNS_2spINS_7IBinderEEEPNS_2ui17StaticDisplayInfoE(display, staticInfo);
+  }
+
+  void _ZN7android14SurfaceControl10getSurfaceEv(void);
+
+  void _ZNK7android14SurfaceControl10getSurfaceEv(void) {
+    _ZN7android14SurfaceControl10getSurfaceEv();
+  }
 }
