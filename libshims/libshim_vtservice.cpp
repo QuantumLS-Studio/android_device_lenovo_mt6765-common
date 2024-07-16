@@ -37,16 +37,13 @@ extern "C" {
         _ZN7android11AudioSourceC1EPK18audio_attributes_tRKNS_8String16Ejjjjii28audio_microphone_direction_tf(&attr, opPackageName, sampleRate, channelCount, outSampleRate, uid, pid, selectedDeviceId, selectedMicDirection, selectedMicFieldDimension);
     }
 
-    // Surface::Surface(sp<const IGraphicBufferProducer>&, bool, const sp<IBinder>&)
-    void* _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEbRKNS1_INS_7IBinderEEE(
-        void*, const sp<IGraphicBufferProducer>&, bool, const sp<IBinder>&);
+    void _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEbRKNS1_INS_7IBinderEEE(
+        void* thisptr, const sp<IGraphicBufferProducer>& bufferProducer, bool controlledByApp, const sp<IBinder>& surfaceControlHandle);
 
-    // Surface::Surface(const sp<IGraphicBufferProducer>&, bool)
-    void* _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEb(
-        void* _this, const sp<IGraphicBufferProducer>& bufferProducer,
-        bool controlledByApp)
-    {
-        return _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEbRKNS1_INS_7IBinderEEE(
-            _this, bufferProducer, controlledByApp, nullptr);
+    void _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEb(
+        void* thisptr, const sp<IGraphicBufferProducer> &bufferProducer, bool controlledByApp) {
+            _ZN7android7SurfaceC1ERKNS_2spINS_22IGraphicBufferProducerEEEbRKNS1_INS_7IBinderEEE(thisptr, bufferProducer, controlledByApp, nullptr);
     }
+
+    int _ZN7android10MediaMuxerC1EiNS0_12OutputFormatE[6] = { 0, 1, 2, 3, 4, NULL };
 }
