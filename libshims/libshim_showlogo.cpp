@@ -35,4 +35,10 @@ extern "C" {
   void _ZNK7android14SurfaceControl10getSurfaceEv(void) {
     _ZN7android14SurfaceControl10getSurfaceEv();
   }
+
+  void _ZN7android21SurfaceComposerClient11Transaction5applyEbb(bool synchronous, bool oneWay);
+
+  void _ZN7android21SurfaceComposerClient11Transaction5applyEb(bool synchronous) {
+    _ZN7android21SurfaceComposerClient11Transaction5applyEbb(synchronous, false);
+  }
 }
