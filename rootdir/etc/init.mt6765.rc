@@ -138,7 +138,8 @@ on charger
     start hwservicemanager
     start light-hal-2-0
     start health-hal-2-0
-
+    start charger
+    
 on fs
     write /proc/bootprof "INIT:Mount_START"
     write /sys/kernel/debug/tracing/trace_marker "B|1|Mount"
@@ -1093,3 +1094,10 @@ service osi /system/bin/osi
     disabled
     oneshot
     #seclabel u:r:osi:s0
+
+service charger /system/bin/charger
+    class charger
+    user root
+    group system root shell graphics input wakelock
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
