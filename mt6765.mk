@@ -97,7 +97,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-service \
     android.hardware.memtrack@1.0-impl \
@@ -145,7 +144,6 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service \
-    android.hardware.keymaster@4.0-impl \
     android.hardware.keymaster@4.0.vendor
 
 PRODUCT_COPY_FILES += \
@@ -165,7 +163,6 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor \
-    libclang_rt.ubsan_standalone-aarch64-android \
     libopus \
     libstagefright_softomx.vendor \
     libvorbisidec \
