@@ -170,6 +170,7 @@ ro.surface_flinger.set_idle_timer_ms=250
 ro.surface_flinger.set_touch_timer_ms=300
 debug.renderengine.backend=threaded
 debug.sf.enable_gl_backpressure=1
+debug.sf.enable_transaction_tracing=false
 debug.sf.disable_client_composition_cache=1
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=30000000
