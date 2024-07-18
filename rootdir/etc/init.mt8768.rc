@@ -978,6 +978,9 @@ on property:sys.boot_completed=1
     write /proc/bootprof "0"
     write /proc/mtprintk ${persist.vendor.uartconsole.enable}
 
+on property:init.svc.console=running
+    stop console
+
 ## mtk printk uart controller
 on property:persist.vendor.uartconsole.enable=*
     write /proc/mtprintk ${persist.vendor.uartconsole.enable}
