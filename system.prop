@@ -42,3 +42,6 @@ mediatek.wlan.ctia=0
 
 # Zygote
 ro.zygote.preload.enable=0
+
+# Enable low ram property
+ro.config.low_ram=true
