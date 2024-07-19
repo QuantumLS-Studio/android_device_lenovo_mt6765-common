@@ -39,7 +39,7 @@ DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_BOOT_HEADER_VERSION := 2
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=enforcing androidboot.init_fatal_reboot_target=recovery androidboot.hardware=mt6765
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive androidboot.init_fatal_reboot_target=recovery androidboot.hardware=mt6765
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x07808000
@@ -90,10 +90,10 @@ BOARD_VNDK_VERSION := current
 
 # SELinux
 # Inherit from the common SEPolicy for Lenovo devices
-include device/lenovo/sepolicy/sepolicy.mk
+# include device/lenovo/sepolicy/sepolicy.mk
 
 # !!! DISABLE IN RELEASE !!!
-SELINUX_IGNORE_NEVERALLOWS := true
+# SELINUX_IGNORE_NEVERALLOWS := true
 
 # Inherit the proprietary files
 include vendor/lenovo/mt6765-common/BoardConfigVendor.mk
