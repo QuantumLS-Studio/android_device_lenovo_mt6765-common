@@ -24,7 +24,11 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl-mediatek \
     android.hardware.audio.service \
     android.hardware.audio@5.0.vendor \
-    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio@7.0.vendor \
+    android.hardware.audio.common@5.0.vendor \
+    android.hardware.audio.common@5.0-util.vendor \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio.effect@5.0.vendor \
     android.hardware.soundtrigger@2.2-impl \
     audio.bluetooth.default \
     audio.r_submix.default \
@@ -57,6 +61,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio@2.0.vendor \
     android.hardware.bluetooth.a2dp@1.0.vendor \
     android.hardware.bluetooth@1.0.vendor
 
