@@ -188,7 +188,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-core/libclang_rt.ubsan_standalone-aarch64-android.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libclang_rt.ubsan_standalone-aarch64-android.so
-
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.2 \
@@ -319,7 +318,8 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v30.so \
     prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib/libunwindstack-v30.so \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so \
-    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack-v30.so
+    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack-v30.so \
+    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/llndk-stub/libc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc-v32.so
 
 # WiFi
 PRODUCT_PACKAGES += \

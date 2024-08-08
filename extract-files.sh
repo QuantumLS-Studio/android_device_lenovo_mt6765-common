@@ -106,7 +106,15 @@ function blob_fixup() {
         vendor/lib*/hw/audio.primary.mt6765.so)
             "${PATCHELF}" --replace-needed libmedia_helper.so libmedia_helper-v29.so ${2}
             ;;
-        vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service|vendor/lib*/hw/vendor.mediatek.hardware.pq@2.3-impl.so|vendor/lib*/vendor.mediatek.hardware.pq@2.*.so)
+        vendor/lib*/hw/vendor.mediatek.hardware.pq@2.3-impl.so)
+            "${PATCHELF}" --replace-needed libutils.so libutils-v30.so "${2}"
+            ;;
+        vendor/lib64/libmtkcam_ulog.so)
+            "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
+            "${PATCHELF}" --replace-needed libutils.so libutils-v30.so "${2}"
+            ;;
+        vendor/lib64/libcam.feature_utils.so|vendor/lib64/libcam.iopipe.so)
+            "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
             "${PATCHELF}" --replace-needed libutils.so libutils-v30.so "${2}"
             ;;
     esac
