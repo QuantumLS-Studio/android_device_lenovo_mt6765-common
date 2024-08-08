@@ -687,6 +687,8 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.2.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.3.so
 
 # Keymaster
+vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod
+vendor/etc/init/android.hardware.keymaster@4.0-service.beanpod.rc
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.keyinstall@1.0-service
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
