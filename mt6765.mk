@@ -116,6 +116,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0-impl
 
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-core/libgatekeeper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgatekeeper-v29.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libgatekeeper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgatekeeper-v29.so
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0.vendor \
