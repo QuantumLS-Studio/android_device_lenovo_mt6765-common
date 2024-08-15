@@ -13,7 +13,7 @@ extern "C" {
             audio_channel_mask_t channelMask,
             size_t frameCount,
             audio_output_flags_t flags,
-            android::AudioTrack::callback_t cbf,
+            android::AudioTrack::legacy_callback_t cbf,
             void* user,
             int32_t notificationFrames,
             audio_session_t sessionId,
