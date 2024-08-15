@@ -54,8 +54,6 @@
         <transport>hwbinder</transport>
         <fqname>@1.2::ICryptoFactory/widevine</fqname>
         <fqname>@1.2::IDrmFactory/widevine</fqname>
-        <fqname>@1.0::IDrmFactory/default</fqname>
-        <fqname>@1.0::ICryptoFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
