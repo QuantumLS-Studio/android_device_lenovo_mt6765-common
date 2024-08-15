@@ -109,6 +109,9 @@ function blob_fixup() {
         vendor/lib*/hw/vendor.mediatek.hardware.pq@2.3-impl.so)
             "${PATCHELF}" --replace-needed libutils.so libutils-v30.so "${2}"
             ;;
+        vendor/lib*/hw/libSoftGatekeeper.so)
+            "${PATCHELF}" --replace-needed "libgatekeeper.so" "libgatekeeper-v29.so" "${2}"
+            ;;
         vendor/lib64/libmtkcam_ulog.so)
             "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
             "${PATCHELF}" --replace-needed libutils.so libutils-v30.so "${2}"
