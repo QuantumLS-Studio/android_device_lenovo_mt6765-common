@@ -45,3 +45,6 @@ mediatek.wlan.ctia=0
 
 # Zygote
 ro.zygote.preload.enable=0
+
+# OTA Updates
+lineage.updater.uri=https://ota.vistaslayer.ovh/api/v1/{device}/{type}/{incr}
