@@ -175,13 +175,19 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.2.vendor \
+    libcodec2_hidl@1.1.vendor \
+    libcodec2_hidl@1.2.vendor \
     libavservices_minijail \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor \
     libopus \
     libstagefright_softomx.vendor \
     libvorbisidec \
-    libvpx
+    libvpx \
+    libsfplugin_ccodec_utils.vendor \
+    libcodec2_soft_common.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
