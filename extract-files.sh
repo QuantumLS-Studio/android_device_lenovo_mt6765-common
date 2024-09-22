@@ -120,6 +120,9 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
             "${PATCHELF}" --replace-needed libutils.so libutils-v30.so "${2}"
             ;;
+        vendor/lib/libMtkOmxVdecEx.so)
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v32.so" "$2"
+            ;;
     esac
 }
 
