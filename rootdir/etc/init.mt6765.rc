@@ -920,6 +920,9 @@ on boot
     # Prevents permission denied error for telephony
     chmod 0644 /proc/cmdline
 
+    echo ondemand > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    echo ondemand > /sys/devices/system/cpu/cpu4s/cpufreq/scaling_governor
+
 on property:ro.board.platform=mt6753
     chown system system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
     chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
