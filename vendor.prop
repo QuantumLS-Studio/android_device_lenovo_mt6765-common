@@ -200,8 +200,5 @@ ro.vendor.wfd.iframesize.level=0
 # EGL
 ro.hardware.egl=mtk
 
-# Dolby
-ro.vendor.dolby.dax.version=DAX3_3.5.6.11_r1
-
 # OTA Updates
 lineage.updater.uri=https://ota.vistaslayer.ovh/api/v1/{device}/{type}/{incr}
