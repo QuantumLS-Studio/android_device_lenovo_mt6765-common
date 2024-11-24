@@ -104,7 +104,7 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed libshim_memset.so "${2}"
             ;;
         vendor/lib*/hw/audio.primary.mt6765.so)
-            "${PATCHELF}" --replace-needed libmedia_helper.so libmedia_helper-v29.so ${2}
+            "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v29.so" "${2}"
             ;;
         vendor/lib*/hw/vendor.mediatek.hardware.pq@2.3-impl.so)
             "${PATCHELF}" --replace-needed libutils.so libutils-v30.so "${2}"
