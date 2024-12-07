@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter achilles6_row_data amar_row_lte,$(TARGET_DEVICE)),)
+ifneq ($(TARGET_DEVICE), X306FC)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

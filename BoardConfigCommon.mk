@@ -93,10 +93,10 @@ BOARD_VNDK_VERSION := current
 
 # SELinux
 # Inherit from the common SEPolicy for Lenovo devices
-include device/lenovo/sepolicy/SEPolicy.mk
+include device/lenovo/mt6765/sepolicy/sepolicy.mk
 
 # !!! DISABLE IN RELEASE !!!
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Inherit the proprietary files
-include vendor/lenovo/mt6765-common/BoardConfigVendor.mk
+include vendor/lenovo/mt6768-common/BoardConfigVendor.mk
