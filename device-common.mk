@@ -7,6 +7,11 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Inherit the proprietary files
+$(call inherit-product, vendor/lenovo/mt6765-common/mt6765-common-vendor.mk)
+
+PRODUCT_CHARACTERISTICS := tablet
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
@@ -16,6 +21,7 @@ PRODUCT_SOONG_NAMESPACES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
@@ -356,17 +362,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-# Inherit the proprietary files
-$(call inherit-product, vendor/lenovo/mt6765-common/X306FC-common-vendor.mk)
-
-COMMON_LUNCH_CHOICES := \
-    lineage_X306FC-userdebug \
-    lineage_X306FC-eng
-
-PRODUCT_NAME := lineage_X306FC
-PRODUCT_BRAND := Lenovo
-PRODUCT_MANUFACTURER := LENOVO
-PRODUCT_DEVICE := X306FC
-PRODUCT_MODEL := Lenovo Tab M10HD 2nd
-

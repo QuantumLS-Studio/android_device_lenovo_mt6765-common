@@ -4,7 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BOARD_VENDOR := lenovo
 COMMON_PATH := device/lenovo/mt6765-common
+VENDOR_PATH := vendor/lenovo/mt6765-common
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -93,10 +95,10 @@ BOARD_VNDK_VERSION := current
 
 # SELinux
 # Inherit from the common SEPolicy for Lenovo devices
-include device/lenovo/mt6765/sepolicy/sepolicy.mk
+include $(COMMON_PATH)/sepolicy/sepolicy.mk
 
 # !!! DISABLE IN RELEASE !!!
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Inherit the proprietary files
-include vendor/lenovo/mt6768-common/BoardConfigVendor.mk
+include $(VENDOR_PATH)/BoardConfigVendor.mk
