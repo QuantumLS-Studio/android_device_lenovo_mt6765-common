@@ -1,0 +1,49 @@
+# Purpose : allow to access kpd driver file
+allow radio sysfs_keypad_file:dir r_dir_perms;
+allow radio sysfs_keypad_file:file w_file_perms;
+
+# Purpose : for bluetooth relayer mode
+allow radio block_device:dir search;
+allow radio ttyGS_device:chr_file rw_file_perms;
+
+# Purpose :
+#   Write IMEI - presanity item write imei should read the file on storage
+#   Swift APK integration - access TTL scripts and logs on external storage
+#   eng mode camera - save iamges files and log files on external storage
+#   eng mode ygps - save location information on external storage
+allow radio media_rw_data_file:dir create_dir_perms;
+allow radio media_rw_data_file:file create_file_perms;
+
+# Purpose :
+#   Swift APK integration - access ccci dir/file
+allow radio ccci_mdinit:dir r_dir_perms;
+
+# Purpose : HIDL for rilproxy
+binder_call(radio, hal_telephony)
+
+# Purpose: allow get telephony Sensitive property
+get_prop(radio, vendor_mtk_telephony_sensitive_prop)
+
+# Purpose : HIDL for imsa
+binder_call(radio, mtk_hal_imsa)
+
+# Purpose : Allow to use HAL imsa
+hal_client_domain(radio, hal_mtk_imsa)
+
+# Purpose: For audio parameter tuning
+binder_call(radio, mtk_hal_audio)
+
+# Purpose: Allow radio to get vendor_mtk_tel_switch_prop
+get_prop(radio, vendor_mtk_tel_switch_prop)
+
+# Purpose : Swift APK integration - access ccci dir/file
+allow radio ccci_fsd:dir r_dir_perms;
+
+allow radio gpuservice:binder call;
+allow radio system_app_data_file:dir getattr;
+allow radio debugfs_ion:dir search;
+allow radio adb_data_file:file r_file_perms;
+
+get_prop(radio, vendor_telephony_prop)
+get_prop(radio, vendor_mtk_radio_prop)
+get_prop(radio, vendor_mtk_ril_mode_prop)
