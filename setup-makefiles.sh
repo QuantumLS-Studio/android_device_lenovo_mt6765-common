@@ -25,7 +25,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "amar_row_lte"
+write_headers "X306FC"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true

@@ -6,8 +6,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(TARGET_DEVICE), X306FC X306X)
-
+ifneq ($(TARGET_DEVICE), X306FC)
 include $(call all-makefiles-under,$(LOCAL_PATH))
-
 endif

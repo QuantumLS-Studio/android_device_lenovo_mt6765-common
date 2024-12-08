@@ -98,7 +98,7 @@ BOARD_VNDK_VERSION := current
 include $(COMMON_PATH)/sepolicy/sepolicy.mk
 
 # !!! DISABLE IN RELEASE !!!
-SELINUX_IGNORE_NEVERALLOWS := true
+SELINUX_IGNORE_NEVERALLOWS := false
 
 # Inherit the proprietary files
 include $(VENDOR_PATH)/BoardConfigVendor.mk
