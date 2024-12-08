@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := lenovo
 COMMON_PATH := device/lenovo/mt6765-common
-VENDOR_PATH := vendor/lenovo/mt6765-common
+VENDOR_PATH := vendor/lenovo/X306FC-common
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
