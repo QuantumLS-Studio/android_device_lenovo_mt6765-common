@@ -1,4 +1,4 @@
-# Android Device Tree for Lenovo Tab 10 HD 2nd (TB-X306FC)
+Android Device Tree for Lenovo Tab 10 HD 2nd (TB-X306FC)
 
 ==========================================================
 
@@ -6,7 +6,7 @@ Basic   | Spec Sheet
 -------:|:----------
 CHIPEST | MediaTek MT6765 (MT8768WT)
 CPU     | MediaTek Helio P22T Cortex-A53
-GPU     | Imagination Technologies PwerVR Rogue GE8320
+GPU     | Imagination Technologies PowerVR Rogue GE8320
 Memory  | 4 GB
 Shipped Android Version | Android 10
 Storage | 64 GB
