@@ -7,4 +7,4 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 $(call inherit-product, device/lenovo/mt6765-common/device-common.mk)
 
 # Call the proprietary device makefile
-$(call inherit-product, vendor/lenovo/mt6765-common/X306FC/X306FC-common-vendor.mk)
+$(call inherit-product, vendor/lenovo/X306FC-common/X306FC-common-vendor.mk)
