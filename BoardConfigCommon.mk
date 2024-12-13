@@ -10,6 +10,8 @@ VENDOR_PATH := vendor/lenovo/X306FC-common
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
+WITH_DEXPREOPT := true
+DEX_PREOPT_DEFAULT := nostripping
 
 # Architecture
 TARGET_ARCH := arm64
