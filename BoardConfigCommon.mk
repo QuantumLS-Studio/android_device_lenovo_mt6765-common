@@ -36,6 +36,11 @@ TARGET_NO_BOOTLOADER := true
 
 # HIDL
 DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
+
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
+    vendor/lineage/config/device_framework_matrix.xml
+
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
 # Init
@@ -44,7 +49,7 @@ TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_mt6765
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_BOOT_HEADER_VERSION := 2
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=enforcing androidboot.init_fatal_reboot_target=recovery androidboot.hardware=mt6765
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive androidboot.init_fatal_reboot_target=recovery androidboot.hardware=mt6765
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x07808000
@@ -95,7 +100,7 @@ BOARD_VNDK_VERSION := current
 
 # SELinux
 # Inherit from the common SEPolicy for Lenovo devices
-include $(COMMON_PATH)/sepolicy/sepolicy.mk
+#include $(COMMON_PATH)/sepolicy/sepolicy.mk
 
 # !!! DISABLE IN RELEASE !!!
 SELINUX_IGNORE_NEVERALLOWS := false
