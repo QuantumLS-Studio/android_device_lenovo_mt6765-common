@@ -1,10 +1,10 @@
 # Inherit from mt6765-common
 $(call inherit-product, device/lenovo/mt6765-common/device-common.mk)
 
+$(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 800
-
-PRODUCT_SHIPPING_API_LEVEL := 33
 
 PRODUCT_CHARACTERISTICS := tablet
 
