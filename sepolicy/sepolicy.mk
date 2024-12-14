@@ -14,9 +14,7 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     $(MTK_SEPOLICY_PATH)/basic/plat_private \
     $(MTK_SEPOLICY_PATH)/bsp/plat_private
 
-ifneq ($(call math_lt,$(PRODUCT_SHIPPING_API_LEVEL),28),)
-    BOARD_SEPOLICY_DIRS += $(wildcard device/lenovo/mt6765-common/sepolicy/bsp/ota_upgrade)
-endif
+BOARD_SEPOLICY_DIRS += $(wildcard device/lenovo/mt6765-common/sepolicy/bsp/ota_upgrade)
 
 # Inherit Custom sepolicy for mediatek devices
 -include device/custom/sepolicy/mediatek/sepolicy.mk
