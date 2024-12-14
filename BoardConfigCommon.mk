@@ -4,12 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-BOARD_VENDOR := lenovo
 COMMON_PATH := device/lenovo/mt6765-common
-VENDOR_PATH := vendor/lenovo/X306FC-common
 
 # APEX
-DEXPREOPT_GENERATE_APEX_IMAGE := true
 WITH_DEXPREOPT := true
 DEX_PREOPT_DEFAULT := nostripping
 
@@ -72,9 +69,6 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
-
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
@@ -97,10 +91,7 @@ BOARD_VNDK_VERSION := current
 
 # SELinux
 # Inherit from the common SEPolicy for Lenovo devices
-#include $(COMMON_PATH)/sepolicy/sepolicy.mk
-
-# !!! DISABLE IN RELEASE !!!
-SELINUX_IGNORE_NEVERALLOWS := false
+include $(COMMON_PATH)/sepolicy/sepolicy.mk
 
 # Inherit the proprietary files
-include $(VENDOR_PATH)/BoardConfigVendor.mk
+include vendor/lenovo/mt6765-common/BoardConfigVendor.mk
