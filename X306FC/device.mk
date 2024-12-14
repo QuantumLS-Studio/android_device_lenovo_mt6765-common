@@ -4,6 +4,8 @@ $(call inherit-product, device/lenovo/mt6765-common/device-common.mk)
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 800
 
+PRODUCT_SHIPPING_API_LEVEL := 28
+
 PRODUCT_CHARACTERISTICS := tablet
 
 PRODUCT_SOONG_NAMESPACES += \
