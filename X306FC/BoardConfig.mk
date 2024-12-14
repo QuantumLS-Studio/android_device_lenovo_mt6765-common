@@ -5,6 +5,8 @@ include device/lenovo/mt6765-common/BoardConfigCommon.mk
 
 TARGET_SCREEN_DENSITY := 151
 
+UILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+
 # Kernel
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb

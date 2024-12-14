@@ -200,5 +200,3 @@ ro.vendor.wfd.iframesize.level=0
 # EGL
 ro.hardware.egl=mtk
 
-# OTA Updates
-#lineage.updater.uri=https://ota.vistaslayer.ovh/api/v1/{device}/{type}/{incr}

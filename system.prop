@@ -38,7 +38,7 @@ ro.vendor.usb.vid=0x17EF
 wifi.direct.interface=p2p0
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
-ro.wifi.channels=
+#ro.wifi.channels=
 ro.mediatek.wlan.wsc=1
 ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
@@ -46,5 +46,3 @@ mediatek.wlan.ctia=0
 # Zygote
 ro.zygote.preload.enable=0
 
-# OTA Updates
-#lineage.updater.uri=https://ota.vistaslayer.ovh/api/v1/{device}/{type}/{incr}
