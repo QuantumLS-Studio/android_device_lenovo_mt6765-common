@@ -275,7 +275,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-vendorcompat
 
 # Rootdir
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     fstab.mt6765 \
     fstab.mt8768 \
     fstab.mt6765.ramdisk \
