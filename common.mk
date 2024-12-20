@@ -41,7 +41,9 @@ PRODUCT_PACKAGES += \
     libaudiopreprocessing \
     libtinycompress \
     tinymix \
-    libtinyxml
+    libtinyxml \
+	libunwindstack.vendor \
+	liblzma.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
@@ -111,7 +113,10 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     disable_configstore \
     libdrm \
-    libdrm.vendor
+    libdrm.vendor \
+	libion.vendor \
+	libssl.vendor \
+	libutilscallstack.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -244,7 +249,9 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0.vendor \
     android.hardware.power@1.1.vendor \
     android.hardware.power@1.2.vendor \
-    android.hardware.power@1.3.vendor
+    android.hardware.power@1.3.vendor \
+	libexpat.vendor \
+	libpower.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/perf/powercontable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.xml \
@@ -269,10 +276,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2 \
     android.hardware.radio.config@1.0.vendor \
     android.hardware.radio.config@1.1.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    libprotobuf-cpp-full \
-    libprotobuf-cpp-full-vendorcompat \
-    libprotobuf-cpp-lite-vendorcompat
+    android.hardware.radio.config@1.2.vendor
 
 # Rootdir
 #PRODUCT_PACKAGES += \
@@ -342,7 +346,11 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack-v30.so \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.common-V2-ndk_platform.so \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.graphics.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.common-V2-ndk_platform.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v32.so \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v32.so
+
+PRODUCT_PACKAGES += \
+	libprotobuf-cpp-full-vendorcompat \
+	libprotobuf-cpp-lite-vendorcompat
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -354,7 +362,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.1.vendor \
     android.hardware.wifi.supplicant@1.2.vendor \
     android.hardware.wifi.hostapd@1.0.vendor \
-    android.hardware.wifi.hostapd@1.1.vendor
+    android.hardware.wifi.hostapd@1.1.vendor \
+	libnl.vendor \
+	libnetutils.vendor
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcompiler_rt.so \
