@@ -12,6 +12,8 @@ $(call inherit-product, vendor/lenovo/mt6765-common/mt6765-common-vendor.mk)
 
 # Dynamic partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := true
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -113,6 +115,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     android.hardware.memtrack@1.0-impl \
     disable_configstore \
+	libvulkan \
     libdrm \
     libdrm.vendor \
 	libion.vendor \
@@ -292,11 +295,10 @@ PRODUCT_PACKAGES += \
     init.mt6765.usb.rc \
     init.project.rc \
     init.recovery.mt6765.rc \
+	init.recovery.mt6765.sh \
 	init.recovery.mt6765.usb.rc \
     init.sensor_1_0.rc \
 	ueventd.mt6765.rc
-#fstab.mt6765 \
-#fstab.mt6765.ramdisk
 
 # Seccomp
 PRODUCT_COPY_FILES += \
@@ -350,6 +352,9 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.graphics.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.common-V2-ndk_platform.so \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v32.so
 
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
+PRODUCT_PRODUCT_VNDK_VERSION := current
+
 # Protobuf
 PRODUCT_PACKAGES += \
 	libprotobuf-cpp-full-vendorcompat \
@@ -368,6 +373,14 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.1.vendor \
 	libnl.vendor \
 	libnetutils.vendor
+
+# NFC
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    NfcNci \
+    Tag \
+    SecureElement \
+    android.hardware.nfc@1.2-service.st
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcompiler_rt.so \
