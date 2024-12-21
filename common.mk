@@ -10,7 +10,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit the proprietary files
 $(call inherit-product, vendor/lenovo/mt6765-common/mt6765-common-vendor.mk)
 
-PRODUCT_CHARACTERISTICS := tablet
+# Dynamic partition
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -85,7 +86,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0.vendor \
     android.hardware.camera.device@3.5.vendor \
     android.hardware.camera.provider@2.4.vendor \
-    libstdc++.vendor \
+    libstdc++.vendor
 
 # Control groups and task profiles
 PRODUCT_COPY_FILES += \
@@ -278,23 +279,24 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.1.vendor \
     android.hardware.radio.config@1.2.vendor
 
-# Rootdir
-#PRODUCT_PACKAGES += \
-    fstab.mt6765 \
-    fstab.mt8768 \
-    fstab.mt6765.ramdisk \
-    fstab.mt8768.ramdisk
+# fastbootd
+PRODUCT_PACKAGES += \
+	android.hardware.fastboot@1.0-impl-mock \
+	fastbootd
 
+# Rootdir
 PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6765.rc \
-    init.mt8768.rc \
     init.mt6765.usb.rc \
     init.project.rc \
     init.recovery.mt6765.rc \
+	init.recovery.mt6765.usb.rc \
     init.sensor_1_0.rc \
-    ueventd.mt6765.rc
+	ueventd.mt6765.rc
+#fstab.mt6765 \
+#fstab.mt6765.ramdisk
 
 # Seccomp
 PRODUCT_COPY_FILES += \
@@ -348,6 +350,7 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.graphics.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.common-V2-ndk_platform.so \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v32.so
 
+# Protobuf
 PRODUCT_PACKAGES += \
 	libprotobuf-cpp-full-vendorcompat \
 	libprotobuf-cpp-lite-vendorcompat
@@ -374,3 +377,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+

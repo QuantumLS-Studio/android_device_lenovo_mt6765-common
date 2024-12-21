@@ -110,6 +110,10 @@ ro.vendor.mediatek.platform=MT6765
 ro.vendor.mediatek.version.branch=alps-mp-q0.mp1
 ro.vendor.mediatek.version.release=alps-mp-q0.mp1-V9.56_lenovo.q0mp1.tb8788p1.64.bsp_P3
 
+# Recovery
+ro.boot.dynamic_partitions=true
+ro.boot.boot_devices=bootdevice,11230000.mmc
+
 # RIL
 ro.telephony.sim.count=2
 persist.radio.default.sim=0
