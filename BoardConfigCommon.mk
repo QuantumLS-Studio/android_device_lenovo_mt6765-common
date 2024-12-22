@@ -70,6 +70,10 @@ BOARD_MKBOOTIMG_ARGS += \
 	--dtb_offset $(BOARD_DTB_OFFSET) \
 	--header_version $(BOARD_BOOT_HEADER_VERSION)
 
+TARGET_KERNEL_CONFIG := amar_row_lte_defconfig
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_SOURCE := kernel/lenovo/X306FC
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
@@ -87,7 +91,7 @@ BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_PARTITION_SIZE := 445849600
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
-OARD_HAS_LARGE_FILESYSTEM := true
+BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Dynamic partition
 BOARD_SUPER_PARTITION_SIZE := 4731174912
@@ -139,9 +143,13 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 BOARD_VNDK_VERSION := current
 
+# Properties
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+
 # SELinux
 # Inherit from the common SEPolicy for Lenovo devices
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
 # Inherit the proprietary files
 include vendor/lenovo/mt6765-common/BoardConfigVendor.mk
+

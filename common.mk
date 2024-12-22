@@ -115,12 +115,12 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     android.hardware.memtrack@1.0-impl \
     disable_configstore \
-	libvulkan \
     libdrm \
     libdrm.vendor \
 	libion.vendor \
 	libssl.vendor \
 	libutilscallstack.vendor
+#libvulkan
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -375,14 +375,6 @@ PRODUCT_PACKAGES += \
 	libnl.vendor \
 	libnetutils.vendor
 
-# NFC
-#PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    NfcNci \
-    Tag \
-    SecureElement \
-    android.hardware.nfc@1.2-service.st
-
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcompiler_rt.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcompiler_rt.so
@@ -391,4 +383,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+
+# LineageOS trust
+PRODUCT_PACKAGES += \
+    lineage.trust@1.0-service
 
