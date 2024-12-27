@@ -4,7 +4,6 @@ on init
     setprop sys.usb.ffs.aio_compat 1
 
 on post-fs
-    # Support A/B feature for emmc boot region
     symlink /dev/block/sda /dev/block/mmcblk0boot0
     symlink /dev/block/sdb /dev/block/mmcblk0boot1
     symlink /dev/block/mmcblk0boot0 /dev/block/platform/bootdevice/by-name/preloader_a

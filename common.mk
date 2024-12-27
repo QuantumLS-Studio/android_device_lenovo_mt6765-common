@@ -13,7 +13,6 @@ $(call inherit-product, vendor/lenovo/mt6765-common/mt6765-common-vendor.mk)
 # Dynamic partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := true
-PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -295,11 +294,12 @@ PRODUCT_PACKAGES += \
     init.mt6765.usb.rc \
     init.project.rc \
     init.recovery.mt6765.rc \
-	init.recovery.mt8768.rc \
-	init.recovery.mt6765.sh \
-	init.recovery.mt6765.usb.rc \
     init.sensor_1_0.rc \
 	ueventd.mt6765.rc
+
+PRODUCT_PACKAGES += \
+	e2fsck \
+	tune2fs
 
 # Seccomp
 PRODUCT_COPY_FILES += \
@@ -353,7 +353,6 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.graphics.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.common-V2-ndk_platform.so \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v32.so
 
-#PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
 PRODUCT_PRODUCT_VNDK_VERSION := current
 
 # Protobuf
