@@ -1,5 +1,6 @@
-<manifest version="5.0" type="device" target-level="4">
+<manifest version="1.0" type="device" target-level="4">
     <kernel target-level="4"/>
+    
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -10,6 +11,7 @@
         </interface>
         <fqname>@6.0::IDevicesFactory/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
@@ -20,6 +22,7 @@
         </interface>
 	    <fqname>@6.0::IEffectsFactory/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
         <transport>hwbinder</transport>
@@ -30,6 +33,7 @@
         </interface>
         <fqname>@1.0::IBluetoothHci/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
@@ -40,6 +44,7 @@
         </interface>
         <fqname>@2.4::ICameraProvider/internal/0</fqname>
     </hal>
+    
     <hal format="hidl">
 	    <name>vendor.mediatek.hardware.camera.postproc</name>
         <transport>hwbinder</transport>
@@ -50,12 +55,14 @@
         </interface>
         <fqname>@1.0::IPostDevice/internal/0</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ICryptoFactory/widevine</fqname>
         <fqname>@1.2::IDrmFactory/widevine</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
@@ -66,6 +73,7 @@
         </interface>
         <fqname>@1.0::IGatekeeper/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.gnss</name>
         <transport>hwbinder</transport>
@@ -78,6 +86,7 @@
         <fqname>@1.1::IGnss/default</fqname>
         <fqname>@2.0::IGnss/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.graphics.allocator</name>
         <transport>hwbinder</transport>
@@ -88,6 +97,7 @@
         </interface>
         <fqname>@2.0::IAllocator/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.graphics.composer</name>
         <transport>hwbinder</transport>
@@ -98,6 +108,7 @@
         </interface>
         <fqname>@2.2::IComposer/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
         <transport arch="32+64">passthrough</transport>
@@ -108,6 +119,7 @@
         </interface>
         <fqname>@2.1::IMapper/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
@@ -118,6 +130,7 @@
         </interface>
         <fqname>@4.0::IKeymasterDevice/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.light</name>
         <transport>hwbinder</transport>
@@ -128,6 +141,7 @@
         </interface>
         <fqname>@2.0::ILight/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
         <transport>hwbinder</transport>
@@ -143,6 +157,7 @@
         <fqname>@1.0::IOmx/default</fqname>
         <fqname>@1.0::IOmxStore/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.memtrack</name>
         <transport>hwbinder</transport>
@@ -153,6 +168,7 @@
         </interface>
         <fqname>@1.0::IMemtrack/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.power</name>
         <transport>hwbinder</transport>
@@ -163,6 +179,7 @@
         </interface>
         <fqname>@1.3::IPower/default</fqname>
     </hal>
+    
     <hal format="hidl" override="true">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
@@ -188,6 +205,7 @@
         <fqname>@1.4::IRadio/se1</fqname>
         <fqname>@1.4::IRadio/slot1</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
         <transport>hwbinder</transport>
@@ -198,6 +216,7 @@
         </interface>
         <fqname>@1.1::IRadioConfig/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
@@ -208,6 +227,7 @@
         </interface>
         <fqname>@2.0::ISensors/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
         <transport>hwbinder</transport>
@@ -218,6 +238,7 @@
         </interface>
         <fqname>@2.2::ISoundTriggerHw/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.usb</name>
         <transport>hwbinder</transport>
@@ -228,6 +249,7 @@
         </interface>
         <fqname>@1.1::IUsb/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.vibrator</name>
         <transport>hwbinder</transport>
@@ -238,6 +260,7 @@
         </interface>
         <fqname>@1.0::IVibrator/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.wifi</name>
         <transport>hwbinder</transport>
@@ -248,6 +271,7 @@
         </interface>
         <fqname>@1.3::IWifi/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.wifi.hostapd</name>
         <transport>hwbinder</transport>
@@ -258,6 +282,7 @@
         </interface>
         <fqname>@1.1::IHostapd/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>android.hardware.wifi.supplicant</name>
         <transport>hwbinder</transport>
@@ -268,16 +293,7 @@
         </interface>
         <fqname>@1.2::ISupplicant/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.dolby.hardware.dms</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IDms</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::IDms/default</fqname>
-    </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.atci</name>
         <transport>hwbinder</transport>
@@ -288,6 +304,7 @@
         </interface>
         <fqname>@1.0::IAtcid/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.camera.bgservice</name>
         <transport>hwbinder</transport>
@@ -298,6 +315,7 @@
         </interface>
         <fqname>@1.1::IBGService/internal/0</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.engineermode</name>
         <transport>hwbinder</transport>
@@ -308,6 +326,7 @@
         </interface>
         <fqname>@1.2::IEmd/EmHidlServer</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.keyinstall</name>
         <transport>hwbinder</transport>
@@ -318,6 +337,7 @@
         </interface>
         <fqname>@1.0::IKeyinstall/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.keymaster_attestation</name>
         <transport>hwbinder</transport>
@@ -328,6 +348,7 @@
         </interface>
         <fqname>@1.1::IKeymasterDevice/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.lbs</name>
         <transport>hwbinder</transport>
@@ -372,6 +393,7 @@
         <fqname>@1.0::ILbs/mtk_mnld2nlputils</fqname>
         <fqname>@1.0::ILbs/mtk_mtklogger2mnld</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mms</name>
         <transport>hwbinder</transport>
@@ -382,6 +404,7 @@
         </interface>
         <fqname>@1.5::IMms/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkcodecservice</name>
         <transport>hwbinder</transport>
@@ -392,6 +415,7 @@
         </interface>
         <fqname>@1.1::IMtkCodecService/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkpower</name>
         <transport>hwbinder</transport>
@@ -407,6 +431,7 @@
         <fqname>@1.0::IMtkPerf/default</fqname>
         <fqname>@1.0::IMtkPower/default</fqname>
     </hal>
+    
     <hal format="hidl" override="true">
         <name>vendor.mediatek.hardware.mtkradioex</name>
         <transport>hwbinder</transport>
@@ -429,6 +454,7 @@
         <fqname>@1.6::IMtkRadioEx/mtkSe1</fqname>
         <fqname>@1.6::IMtkRadioEx/mtkSlot1</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.netdagent</name>
         <transport>hwbinder</transport>
@@ -439,6 +465,7 @@
         </interface>
         <fqname>@1.0::INetdagent/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.nvram</name>
         <transport>hwbinder</transport>
@@ -449,6 +476,7 @@
         </interface>
         <fqname>@1.1::INvram/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.power</name>
         <transport>hwbinder</transport>
@@ -459,6 +487,7 @@
         </interface>
         <fqname>@2.1::IPower/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.pq</name>
         <transport>hwbinder</transport>
@@ -469,6 +498,7 @@
         </interface>
         <fqname>@2.3::IPictureQuality/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.mediatek.hardware.wifi.supplicant</name>
         <transport>hwbinder</transport>
@@ -479,6 +509,7 @@
         </interface>
         <fqname>@2.0::ISupplicant/default</fqname>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.microtrust.hardware.capi</name>
         <transport>hwbinder</transport>
@@ -489,7 +520,9 @@
         </interface>
         <fqname>@2.0::IClientApiDevice/default</fqname>
     </hal>
+    
     <sepolicy>
         <version>33.0</version>
     </sepolicy>
+
 </manifest>
