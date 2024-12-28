@@ -295,7 +295,7 @@ PRODUCT_PACKAGES += \
     init.project.rc \
     init.recovery.mt6765.rc \
     init.sensor_1_0.rc \
-	ueventd.mt6765.rc
+	ueventd.mt6765.rc \
 
 PRODUCT_PACKAGES += \
 	e2fsck \
