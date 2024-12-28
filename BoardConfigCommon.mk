@@ -70,7 +70,7 @@ BOARD_MKBOOTIMG_ARGS += \
 	--dtb_offset $(BOARD_DTB_OFFSET) \
 	--header_version $(BOARD_BOOT_HEADER_VERSION)
 
-TARGET_KERNEL_CONFIG := amar_row_lte_defconfig
+TARGET_KERNEL_CONFIG := amar_prc_wifi_com_defconfig
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/lenovo/X306FC
 
